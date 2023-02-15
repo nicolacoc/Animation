@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animation</title>
+    <style>
+        .ele2, .ele3 {
+            border: 5px solid;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+        }
+
+        .ele2 {
+            animation-name: my-animation;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+        }
+        .ele3 {
+            animation-name: over-and-back;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+        }
+        
+        @keyframes my-animation {
+            0% {
+                background-color: white;
+
+            }
+            50% {
+                background-color: darkblue;
+
+            }
+            90% {
+                background-color: red;
+                position: relative;
+                left: 0;
+                top: 100px;
+            }
+            100% {
+                background-color: white;
+                position: relative;
+                left: 0;
+                top: 0;
+            }
+
+            
+        }
+
+        @keyframes over-and-back {
+            0% {
+                background-color: hsl(271, 49%, 54%, 0);
+                position: relative;
+                left: 0;
+                top: 0;
+            }
+            50% {
+                background-color: hsl(271, 49%, 54%, 1);
+                position: relative;
+                left: 250px;
+                top: 10px
+            }
+            90% {
+                background-color: hsl(271, 49%, 54%, 0);
+                position: relative;
+                left: 0;
+                top: 100px;
+            }
+            100% {
+                background-color: hsl(271, 49%, 54%, 0);
+                position: relative;
+                left: 0;
+                top: 0;
+            }
+        }
+
+    </style>
+</head>
+<body>
+<div>
+    <div class="ele2">&nbsp;</div>
+    <div class="ele3">&nbsp;</div>
+</div>
+</body>
+</html>
